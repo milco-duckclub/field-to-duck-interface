@@ -4,9 +4,11 @@
 import streamlit as st
 import pandas as pd
 import datetime as dt
-import firebase_admin 
-from firebase_admin import credentials, firestore
 
+
+ from google.cloud import firestore
+ from firestore import credentials, firestore
+ 
 
 
 # --- Data ---
