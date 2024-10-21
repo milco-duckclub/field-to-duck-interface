@@ -61,7 +61,7 @@ if submitted:
         if count > 0:
             st.write(f"  - {duck}: {count}")
     st.write("**Day of Shoot Draw Number:**", day_of_shoot)
-    st.write( shoot_datetime )
+    st.write("**Specific Date-Time:**",  shoot_datetime )
 
 
 
