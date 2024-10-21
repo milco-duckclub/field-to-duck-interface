@@ -6,8 +6,21 @@ import pandas as pd
 import datetime as dt
 
 from google.cloud import firestore
-import firebase_admin
-from firebase_admin import credentials, firestore  # Corrected import
+
+#import firebase_admin
+#from firebase_admin import credentials, firestore  # Corrected import
+now = dt.datetime.now(dt.timezone.utc).isoformat() 
+
+
+db = firestore.Client.from_service_account_json("meow.json")
+shoot_event = db.collection('shoots').document( now )
+shoot_event.set({
+	'Hunter':'Nancy Pelosi',
+    'dayofshoot-draw-number': 1815
+})
+
+
+
 
 
 
@@ -35,10 +48,7 @@ with st.form("hunting_log"):
    
     # Time of day
     time_of_day = st.radio("Time of Day:", ["Morning", "Afternoon"])
-    shoot_datetime = dt.datetime.now()
-   
-
-
+  
 
     # Duck count
     st.subheader("Duck Count (max 14 each)")
@@ -67,7 +77,7 @@ if submitted:
         if count > 0:
             st.write(f"  - {duck}: {count}")
     st.write("**Day of Shoot Draw Number:**", day_of_shoot)
-    st.write("**Specific Date-Time:**",  shoot_datetime )
+    st.write("**Specific Date-Time:**",  now )
 
 
 
