@@ -1,4 +1,5 @@
 #requirements.txt
 
 
-google-cloud-firestore==2.18.0
+
+google-cloud-firestore==2.11.1

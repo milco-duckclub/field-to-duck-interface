@@ -5,9 +5,7 @@ import streamlit as st
 import pandas as pd
 import datetime as dt
 
-
-from google.cloud.firestore import firestore
-from firestore import credentials
+from google.cloud import firestore
 
 
 
