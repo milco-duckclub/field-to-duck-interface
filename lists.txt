@@ -1,0 +1,37 @@
+lists.txt
+duck_types = [
+    # Dabbling Ducks
+    "Mallard", 
+    "Gadwall", 
+    "American Wigeon", 
+    "Eurasian Wigeon", 
+    "Northern Pintail", 
+    "Green-winged Teal", 
+    "Blue-winged Teal", 
+    "Cinnamon Teal", 
+    "Northern Shoveler", 
+    "Wood Duck",
+
+    # Diving Ducks
+    "Canvasback", 
+    "Redhead", 
+    "Ring-necked Duck", 
+    "Lesser Scaup", 
+    "Greater Scaup", 
+    "Bufflehead", 
+    "Common Goldeneye", 
+    "Barrow's Goldeneye", 
+    "Ruddy Duck",
+
+    # Sea Ducks
+    "Surf Scoter", 
+    "White-winged Scoter", 
+    "Black Scoter", 
+    "Long-tailed Duck", 
+    "Harlequin Duck", 
+
+    # Mergansers
+    "Common Merganser", 
+    "Red-breasted Merganser", 
+    "Hooded Merganser" 
+]

@@ -3,30 +3,35 @@
 
 import streamlit as st
 import pandas as pd
+import datetime as dt
 
 # --- Data ---
 # Precreated list of names
 names = ["John Doe", "Jane Doe", "Peter Pan", "Wendy Darling", "Captain Hook"]  
 
 # Duck types
-duck_types = ["Mallard", "Teal", "Wood Duck", "Gadwall", "Wigeon", "Pintail", "Canvasback"]
+duck_types = ["Mallard", "Teal", "Wood Duck", "Gadwall", "Wigeon", "Pintail"]
+
 
 # --- Layout ---
 st.title("Duck Hunting Log")
 
 # --- Form ---
 with st.form("hunting_log"):
+   
     # Name selection
     name = st.selectbox("Name:", names)
 
-    # Map (centered on Lafayette, CA)
-    st.map(pd.DataFrame({
-        'lat': [37.8933],  # Latitude of Lafayette, CA
-        'lon': [-122.1239]  # Longitude of Lafayette, CA
-    }))
+    # Day of shoot draw number
+    day_of_shoot = st.selectbox("Day of Shoot Draw Number:", range(1, 12))
 
+   
     # Time of day
     time_of_day = st.radio("Time of Day:", ["Morning", "Afternoon"])
+    shoot_datetime = dt.datetime.now()
+
+
+
 
     # Duck count
     st.subheader("Duck Count (max 14 each)")
@@ -34,8 +39,13 @@ with st.form("hunting_log"):
     for duck in duck_types:
         duck_count[duck] = st.slider(f"{duck}:", 0, 14, 0)
 
-    # Day of shoot draw number
-    day_of_shoot = st.selectbox("Day of Shoot Draw Number:", range(1, 12))
+
+     # Map (centered on Lafayette, CA)
+    st.map(pd.DataFrame({
+        'lat': [37.8933],  # Latitude of Lafayette, CA
+        'lon': [-122.1239]  # Longitude of Lafayette, CA
+    }))
+
 
     # Submit button
     submitted = st.form_submit_button("Submit")
@@ -50,3 +60,13 @@ if submitted:
         if count > 0:
             st.write(f"  - {duck}: {count}")
     st.write("**Day of Shoot Draw Number:**", day_of_shoot)
+    st.write( shoot_datetime )
+
+
+
+
+
+
+
+
+
