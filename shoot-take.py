@@ -30,6 +30,7 @@ with st.form("hunting_log"):
     # Time of day
     time_of_day = st.radio("Time of Day:", ["Morning", "Afternoon"])
     shoot_datetime = dt.datetime.now()
+    shoot_timezone = dt.now(),timezone()
 
 
 
@@ -61,7 +62,7 @@ if submitted:
         if count > 0:
             st.write(f"  - {duck}: {count}")
     st.write("**Day of Shoot Draw Number:**", day_of_shoot)
-    st.write("**Specific Date-Time:**",  shoot_datetime )
+    st.write("**Specific Date-Time:**",  shoot_datetime, shoot_timezone )
 
 
 
