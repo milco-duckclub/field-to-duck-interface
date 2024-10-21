@@ -35,3 +35,12 @@ duck_types = [
     "Red-breasted Merganser", 
     "Hooded Merganser" 
 ]
+
+
+from tzlocal import get_localzone
+import datetime
+
+local_timezone = get_localzone()
+now = datetime.datetime.now(local_timezone)
+
+print(now.tzinfo)  # Output the timezone information
