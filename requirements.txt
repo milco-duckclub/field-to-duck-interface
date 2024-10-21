@@ -1,4 +1,4 @@
 #requirements.txt
 
-streamlit
-google-cloud-firestore
+
+google-cloud-firestore==2.18.0
