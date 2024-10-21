@@ -7,7 +7,8 @@ import datetime as dt
 
 # --- Data ---
 # Precreated list of names
-names = ["John Doe", "Jane Doe", "Peter Pan", "Wendy Darling", "Captain Hook"]  
+#names = ["John Doe", "Jane Doe", "Peter Pan", "Wendy Darling", "Captain Hook"]  
+names = ["Lex Hallenberger", "Pete W", "Barack Obama", "Nancy Pelosi", "Elizabeth Warren", "Gavin Newsom", "Kamala Harris"]
 
 # Duck types
 duck_types = ["Mallard", "Teal", "Wood Duck", "Gadwall", "Wigeon", "Pintail"]
