@@ -1,10 +1,10 @@
 #shoot-take.py
 
+
 import streamlit as st
 import pandas as pd
 import datetime as dt
-import firebase_admin
-from firebase_admin import credentials, firestore
+import firebase_admin from firebase_admin import credentials, firestore
 
 
 
