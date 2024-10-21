@@ -6,7 +6,7 @@ import pandas as pd
 import datetime as dt
 
 from google.cloud import firestore
-import firebased_admin
+import firebase_admin
 from firebase_admin import credentials, firestore  # Corrected import
 
 
