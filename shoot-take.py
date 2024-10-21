@@ -6,9 +6,9 @@ import pandas as pd
 import datetime as dt
 
 
- from google.cloud import firestore
- from firestore import credentials, firestore
- 
+from google.cloud import firestore
+from firestore import credentials, firestore
+
 
 
 # --- Data ---
